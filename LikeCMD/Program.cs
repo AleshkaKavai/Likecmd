@@ -97,6 +97,15 @@ namespace LikeCMD
                         {
                             break;
                         }
+                    case "start":
+                        {
+                            if (System.IO.File.Exists(WayFile.Trim() + NameComand.Substring("start".Length + 1, NameComand.Length - "start".Length - 1) + ".exe"))
+                            {
+                                System.Diagnostics.Process.Start(WayFile.Trim() + NameComand.Substring("start".Length + 1, NameComand.Length - "start".Length - 1) + ".exe");
+                            }
+                            else Console.WriteLine("eror");
+                            break;
+                        }
                     case "exit":
                         {
                             break;
